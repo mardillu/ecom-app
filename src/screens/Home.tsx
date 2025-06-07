@@ -50,7 +50,7 @@ const Home = () => {
             <CustomText f14 regular>{item.name}</CustomText>
             <CustomText f14 regular numberOfLines={1} ellipsizeMode="tail">{item.specs}</CustomText>
             <Spacer xsmall />
-            <CustomText f16 bold>{item.price}</CustomText>
+            <CustomText f16 bold>${item.price.toFixed(2)}</CustomText>
           </TouchableOpacity>
         )}
       />

@@ -12,6 +12,16 @@ const ImageUrl: {[key: string]: number} = {
   logo: require('../assets/images/icons/Logo.png'),
   img_icon_notification: require('../assets/images/icons/img_icon_notification.png'),
   img_icon_lens: require('../assets/images/icons/img_icon_lens.png'),
+  img_icon_check_circle: require('../assets/images/icons/img_icon_check_circle.png'),
+  img_icon_close: require('../assets/images/icons/img_icon_close.png'),
+  hugeicons_add: require('../assets/images/icons/hugeicons_add.png'),
+  hugeicons_delete: require('../assets/images/icons/hugeicons_delete.png'),
+  hugeicons_favourite: require('../assets/images/icons/hugeicons_favourite.png'),
+  hugeicons_home: require('../assets/images/icons/hugeicons_home.png'),
+  hugeicons_minus: require('../assets/images/icons/hugeicons_minus.png'),
+  hugeicons_shopping_cart: require('../assets/images/icons/hugeicons_shopping_cart.png'),
+  hugeicons_user: require('../assets/images/icons/hugeicons_user-circle.png'),
+  hugeicons_favourited: require('../assets/images/icons/hugeicons_favourited.png'),
 }
 
 const Font = {
