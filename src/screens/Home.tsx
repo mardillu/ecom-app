@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import {
   View,
-  Text,
-  TextInput,
   FlatList,
   Image,
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
 import { products } from '../data/products';
+import CustomText from '../components/StyledText';
+import Spacer from '../components/Spacer';
+import Divider from '../components/Divider';
+import Header from '../components/Header';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
+    const navigation = useNavigation();
   const [search, setSearch] = useState('');
 
   const filteredProducts = products.filter((item) =>
@@ -19,13 +23,9 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      {/* Search Bar */}
-      <TextInput
-        value={search}
-        onChangeText={setSearch}
-        placeholder="Search products..."
-        style={styles.searchInput}
-      />
+        <Header showSearch={true} search={search} setSearch={setSearch} title={'Technology'} />
+        <Divider color='#F5F5F5' />
+
 
       {/* Product Grid */}
       <FlatList
@@ -34,16 +34,23 @@ const Home = () => {
         numColumns={2}
         columnWrapperStyle={styles.row}
         showsVerticalScrollIndicator={false}
+        ListHeaderComponent={() => (
+            <CustomText f18 mono style={{margin: 8}}>Smartphones, Laptops & Assecories</CustomText>
+        )}
         renderItem={({ item }) => (
-          <TouchableOpacity style={styles.card}>
+          <TouchableOpacity 
+          style={styles.card}
+          onPress={() => navigation.navigate('ProductDetails', { product: item })}
+          >
             <Image
-              source={{ uri: item.image }}
+              source={item.image}
               style={styles.image}
-              resizeMode="cover"
+              resizeMode="contain"
             />
-            <Text style={styles.title}>{item.name}</Text>
-            <Text style={styles.title} numberOfLines={1} ellipsizeMode="tail">{item.name}</Text>
-            <Text style={styles.price}>${item.price}</Text>
+            <CustomText f14 regular>{item.name}</CustomText>
+            <CustomText f14 regular numberOfLines={1} ellipsizeMode="tail">{item.specs}</CustomText>
+            <Spacer xsmall />
+            <CustomText f16 bold>{item.price}</CustomText>
           </TouchableOpacity>
         )}
       />
@@ -54,31 +61,20 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    padding: 16,
-  },
-  searchInput: {
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    marginBottom: 16,
-    fontSize: 16,
+    backgroundColor: '#fbfbfb',
   },
   row: {
     justifyContent: 'space-between',
   },
   card: {
-    width: '48%',
-    backgroundColor: '#f0f0f0',
+    width: '50%',
+    padding: 16,
     borderRadius: 12,
-    padding: 12,
     marginBottom: 16,
   },
   image: {
     width: '100%',
-    height: 130,
+    height: 162,
     borderRadius: 8,
     marginBottom: 8,
   },

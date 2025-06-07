@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, TextProps, StyleSheet, StyleProp, TextStyle } from 'react-native';
+import G from '../styles';
 
 interface CustomTextProps extends TextProps {
     testID?: string;
@@ -35,26 +36,14 @@ interface CustomTextProps extends TextProps {
   w500?: boolean;
   w700?: boolean;
   w400?: boolean;
-  white?: boolean;
-  grey?: boolean;
-  greySecond?: boolean;
-  greyThird?: boolean;
-  appDarkGrey?: boolean;
-  greyLighter?: boolean;
-  redTextError?: boolean;
-  alert?: boolean;
-  green?: boolean;
-  accent?: boolean;
-  secondaryDark?: boolean;
-  secondaryLight?: boolean;
-  secondary?: boolean;
-  secondary45?: boolean;
-  primary?: boolean;
+  w600?: boolean;
+  color?: string;
   HeaderLight?: boolean;
   black?: boolean;
   bold?: boolean;
   medium?: boolean;
   regular?: boolean;
+  mono?: boolean;
   center?: boolean;
   right?: boolean;
   italic?: boolean;
@@ -72,10 +61,52 @@ interface CustomTextProps extends TextProps {
 
 const CustomText: React.FC<CustomTextProps> = props => {
     const style = [
-        props.bold && {fontFamily: G.Font.bold},
+    props.f32 && {fontSize: G.TextSize.f32},
+    props.f31 && {fontSize: G.TextSize.f31},
+    props.f30 && {fontSize: G.TextSize.f30},
+    props.f29 && {fontSize: G.TextSize.f29},
+    props.f28 && {fontSize: G.TextSize.f28},
+    props.f27 && {fontSize: G.TextSize.f27},
+    props.f26 && {fontSize: G.TextSize.f26},
+    props.f25 && {fontSize: G.TextSize.f25},
+    props.f24 && {fontSize: G.TextSize.f24},
+    props.f23 && {fontSize: G.TextSize.f23},
+    props.f22 && {fontSize: G.TextSize.f22},
+    props.f21 && {fontSize: G.TextSize.f21},
+    props.f20 && {fontSize: G.TextSize.f20},
+    props.f19 && {fontSize: G.TextSize.f19},
+    props.f18 && {fontSize: G.TextSize.f18},
+    props.f17 && {fontSize: G.TextSize.f17},
+    props.f16 && {fontSize: G.TextSize.f16},
+    props.f15 && {fontSize: G.TextSize.f15},
+    props.f14 && {fontSize: G.TextSize.f14},
+    props.f13 && {fontSize: G.TextSize.f13},
+    props.f12 && {fontSize: G.TextSize.f12},
+    props.f11 && {fontSize: G.TextSize.f11},
+    props.f10 && {fontSize: G.TextSize.f10},
+    props.f9 && {fontSize: G.TextSize.f9},
+    props.f8 && {fontSize: G.TextSize.f8},
+    props.f7 && {fontSize: G.TextSize.f7},
+    props.f6 && {fontSize: G.TextSize.f6},
+    props.f5 && {fontSize: G.TextSize.f5},
+    props.color && {color: props.color},
+    props.w800 && {fontWeight: G.TextWeight.w800},
+    props.w500 && {fontWeight: G.TextWeight.w500},
+    props.w700 && {fontWeight: G.TextWeight.w700},
+    props.w400 && {fontWeight: G.TextWeight.w400},
+    props.w600 && {fontWeight: G.TextWeight.w600},
+    props.bold && {fontFamily: G.Font.bold},
     props.medium && {fontFamily: G.Font.medium},
     props.regular && {fontFamily: G.Font.regular},
-    ]
+    props.mono && {fontFamily: G.Font.mono},
+    props.center && {textAlign: 'center'},
+    props.right && {textAlign: 'right'},
+    props.underline && {textDecorationLine: 'underline'},
+    props.capitalize && {textTransform: 'capitalize'},
+    props.flexWrap && {flexWrap: 'wrap'},
+    props.width && {width: '100%'},
+    props.style,
+  ];
   return (
    <Text
       testID={props.testID}
