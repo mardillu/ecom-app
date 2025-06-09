@@ -19,9 +19,9 @@ A beautifully designed mobile e-commerce app built using React Native and TypeSc
 
 | Product List | Product Details | Cart |
 |--------------|------------------|------|
-| ![Product List](assets/screenshots/product-list.png) | ![Product Details](assets/screenshots/product-details.png) | ![Cart](assets/screenshots/cart.png) |
+| ![Product List](assets/home-page-catalog.jpeg) | ![Product Details (Liked)](assets/product-details-page-liked.jpeg) | ![Cart](assets/cart-page.jpeg) |
+| - | ![Product Details (Toast)](assets/product-details-page-toast.jpeg) | ![Cart (Toast)](assets/cart-page-toast.jpeg) |
 
-> Replace `assets/screenshots/*.png` with your own screenshots.
 
 ---
 
@@ -39,8 +39,8 @@ A beautifully designed mobile e-commerce app built using React Native and TypeSc
 ### 🛠️ Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/rn-ecommerce-app.git
-cd rn-ecommerce-app
+git clone https://github.com/mardillu/ecom-app.git
+cd ecom-app
 yarn install
 
 
