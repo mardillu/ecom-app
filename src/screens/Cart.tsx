@@ -23,6 +23,7 @@ const CartScreen = () => {
         Toast.show({
             type: 'success',
             text1: 'Item has been added to cart',
+            visibilityTime: 2500
         });
     };
   return (

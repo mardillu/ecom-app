@@ -23,6 +23,7 @@ const ProductDetailsScreen = ({ route }) => {
     Toast.show({
         type: 'success',
         text1: 'Item has been added to cart',
+        visibilityTime: 2500
     });
 };
 

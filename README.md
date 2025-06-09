@@ -1,4 +1,4 @@
-# 🛍️ React Native E-commerce App
+# 🛍️ React Native E-commerce App (MiniMart)
 
 A beautifully designed mobile e-commerce app built using React Native and TypeScript, featuring bottom tab navigation, product listings, detail views, cart functionality, and toast notifications.
 
