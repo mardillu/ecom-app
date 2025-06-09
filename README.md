@@ -44,7 +44,7 @@ A beautifully designed mobile e-commerce app built using React Native and TypeSc
 git clone https://github.com/mardillu/ecom-app.git
 cd ecom-app
 yarn install
-
+```
 
 ---
 
