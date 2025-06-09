@@ -12,7 +12,7 @@ const toastConfig = {
           style={toastStyles.image}
           resizeMode="contain"
           source={G.ImageUrl.img_icon_check_circle} />
-         <CustomText f14 medium>{text1}</CustomText>
+         <CustomText f14 w600 color='#334155'>{text1}</CustomText>
       </View>
      
       <TouchableOpacity onPress={hide}>

@@ -6,6 +6,7 @@ import ProductDetailsScreen from './src/screens/ProductDetailsScreen';
 import Toast from 'react-native-toast-message';
 import toastConfig from './src/components/toastConfig';
 import { CartProvider } from './src/context/CartContext';
+import CartScreen from './src/screens/Cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,7 @@ export default function App() {
           component={ProductDetailsScreen}
            options={{headerShown: false}}
         />
+          <Stack.Screen name="Cart" component={CartScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
      <Toast config={toastConfig} position="top"/>

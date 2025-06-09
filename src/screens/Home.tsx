@@ -26,8 +26,6 @@ const Home = () => {
         <Header showSearch={true} search={search} setSearch={setSearch} title={'Technology'} />
         <Divider color='#F5F5F5' />
 
-
-      {/* Product Grid */}
       <FlatList
         data={filteredProducts}
         keyExtractor={(item) => item.id}

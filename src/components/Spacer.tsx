@@ -74,7 +74,7 @@ const Spacer = (props: Props) => {
     space = G.Gutter.g50;
   }
   if (props.xxxlarge) {
-    space = G.Gutter.g70;
+    space = G.Gutter.g100;
   }
 
   return (
