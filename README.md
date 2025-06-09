@@ -2,6 +2,8 @@
 
 A beautifully designed mobile e-commerce app built using React Native and TypeScript, featuring bottom tab navigation, product listings, detail views, cart functionality, and toast notifications.
 
+>This is codebase for AlphaTwelve App Developer take-home assessment
+
 ---
 
 ## 🚀 Tech Stack
@@ -20,8 +22,9 @@ A beautifully designed mobile e-commerce app built using React Native and TypeSc
 | Product List | Product Details | Cart |
 |--------------|------------------|------|
 | ![Product List](assets/home-page-catalog.jpeg) | ![Product Details (Liked)](assets/product-details-page-liked.jpeg) | ![Cart](assets/cart-page.jpeg) |
-| - | ![Product Details (Toast)](assets/product-details-page-toast.jpeg) | ![Cart (Toast)](assets/cart-page-toast.jpeg) |
-
+|  | ![Product Details (Toast)](assets/product-details-page-toast.jpeg) | ![Cart (Toast)](assets/cart-page-toast.jpeg) |
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/build/intermediates/res/merged/release/ && cd android && ./gradlew :app:assembleRelease && ./gradlew assembleRelease && cd ..",
+    
 
 ---
 
