@@ -2,8 +2,6 @@
 
 A beautifully designed mobile e-commerce app built using React Native and TypeScript, featuring bottom tab navigation, product listings, detail views, cart functionality, and toast notifications.
 
->This is codebase for AlphaTwelve App Developer take-home assessment
-
 ---
 
 ## 🚀 Tech Stack
